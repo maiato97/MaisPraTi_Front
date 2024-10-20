@@ -1,0 +1,488 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    background-image: url('https://kpopping.com/documents/42/0/1448/BTS-Pop-Up-Event-MONOCHROME-Teaser-Photo-documents-1.jpeg?v=f830f');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.90);
+    z-index: 1;
+}
+
+h1, h2{
+    font-family: "Afacad Flux", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+section {
+    position: relative;
+    z-index: 2;
+    min-height: 80vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    margin: 0px;
+}
+
+header {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 5px 0;
+}
+
+.menuicon {
+    margin-bottom: -2px;
+}
+
+.menuicon img {
+    width: 50%;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    background-color: #9a12bd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    padding: 1px;
+    font-family: "Afacad Flux", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    align-items: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 40px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    color: black;
+    font-size: small;
+}
+
+.menu-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 1000;
+    padding: 5px;
+}
+
+.menu-hamburger span {
+    background-color: #9a12bd;
+    height: 7px;
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+    margin: 2px 0;
+    cursor: pointer;
+}
+
+#home {
+    margin-bottom: -50px;
+}
+
+.homeimg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 5px;
+}
+
+.homeimg img {
+    width: auto;
+    height: 220px;
+}
+
+.carrossel h3 {
+    font-family: "Afacad Flux", sans-serif;
+}
+
+.carrossel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.slide {
+    display: none; /* Oculta todos os slides */
+    text-align: center;
+}
+
+.slide.ativo {
+    display: block; /* Exibe apenas o slide ativo */
+}
+
+.slide img {
+    width: 100%; /* Ajusta a imagem para ocupar toda a largura do slide */
+    height: 300px;
+    object-fit: cover;
+}
+
+#rm {
+    object-position: center 13%;
+}
+
+#jin {
+    object-position: top;
+}
+
+#jhope, #taehyung, #jungkook{
+    object-position: center 18%;
+}
+
+#jimin{
+    object-position: top;
+}
+
+.imgSuga{
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.imgSuga img{
+    width: 100%;
+    height: auto;
+    transform: scale(1.9);
+    object-fit: cover;
+    position: absolute;
+    transform: translate(-50%, 15%) scale(1.8);
+}
+
+button {
+    background-color: #111;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #9a12bd;
+}
+
+.prev, .next {
+    position: absolute; /* Posiciona os botões junto do carrossel */
+    top: 50%;
+    transform: translateY(-50%); /* Ajusta a posição para o centro */
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+}
+
+.prev {
+    left: 10%;
+    box-shadow: 0px 0px 30px rgb(205, 41, 255);
+}
+
+.next {
+    right: 10%;
+    box-shadow: 0px 0px 30px rgb(205, 41, 255);
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.video-grid a {
+    display: block;
+}
+
+.video-grid img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (min-width: 1024px){
+    .video-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .homeimg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 5px;
+    }
+
+    .homeimg img {
+        width: auto;
+        height: 200px;
+    }
+
+    body p{
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1023px){
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .homeimg {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 70%;
+        gap: 5px;
+        margin: 0 auto;
+    }
+    .homeimg img {
+        width: 100%;
+        height: auto;
+    }
+    #members{
+        margin-top: 80px;
+    }
+    #home{
+        margin-top: -30px;
+    }
+}
+
+/*Responsividade para tablet e celular*/
+@media (max-width: 1023px){
+    .menu-hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 40px;
+        height: 30px;
+        cursor: pointer;
+        z-index: 1001;
+        padding: 2px;
+    }
+
+    nav {
+        background-color: #9a12bd;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        font-family: "Afacad Flux", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 5px;
+        align-items: center;
+    }
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    .menu li {
+        margin: 30px 0;
+        text-align: center;
+    }
+    .menu.open {
+        display: flex;
+    }
+
+    .prev {
+        left: 1%;
+        box-shadow: 0px 0px 30px rgb(205, 41, 255);
+    }
+
+    .next {
+        right: 1%;
+        box-shadow: 0px 0px 30px rgb(205, 41, 255);
+    }
+}
+
+@media (max-width: 600px){
+    .video-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    body {
+        font-size: 14px;
+    }
+    #home{
+        margin-top: -50px;
+    }
+    #members{
+        margin-top: 50px;
+        margin-bottom: -50px;
+    }
+
+    .homeimg {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 70%;
+        gap: 5px;
+        margin: 0 auto;
+    }
+
+    .homeimg img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+#countdown{
+    margin-bottom: -20%;
+}
+
+#contador {
+    font-size: 2em;
+    color: white;
+    background-color: #9a12bd;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    width: 50%;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+#contador:hover {
+    transform: scale(1.05); /* Aumenta ao passar o mouse */
+    background-color: #8a0fa4; /* Um tom mais escuro de roxo ao passar o mouse */
+}
+
+aside.instagram-links {
+    position: relative;
+    z-index: 3;
+    background-color: rgba(154, 18, 189, 0.8);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+aside.instagram-links h2 {
+    margin-bottom: 15px;
+}
+
+aside.instagram-links ul {
+    list-style: none;
+    padding: 5px;
+}
+
+aside.instagram-links ul li {
+    margin: 15px 0;
+}
+
+aside.instagram-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.4em;
+    font-family: 'Roboto', sans-serif;
+    transition: color 0.3s, transform 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+aside.instagram-links ul li a:hover {
+    color: black;
+    transform: translateX(10px);
+}
+
+aside.instagram-links ul li a i {
+    margin-right: 8px;
+}
+
+aside.instagram-links{
+    animation: fadeIn 1s ease-in-out; /* Aparece suavemente */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    background-color: #111;
+    padding: 40px 0;
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 3;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite quebra de linha */
+}
+
+.footer-links a {
+    color: #9a12bd;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em;
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #c084d5;
+}
+
+footer p {
+    font-size: 0.9em;
+    color: #ccc;
+}
